@@ -8,11 +8,18 @@ spring:
     name: spring-boot-api
 
   datasource:
-    url: ${DB_URL:jdbc:postgresql://localhost:5432/postgres}
-    username: ${DB_USERNAME:postgres}
-    password: ${DB_PASSWORD:password}
+    url: jdbc:h2:mem:demo
+    username: sa
+    password: password
+  #    url: ${DB_URL:jdbc:postgresql://localhost:5432/postgres}
+#    username: ${DB_USERNAME:postgres}
+#    password: ${DB_PASSWORD:password}
 
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
+    defer-datasource-initialization: true
+  h2:
+    console:
+      enabled: true
