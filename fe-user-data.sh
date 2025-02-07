@@ -10,6 +10,7 @@ git clone https://github.com/mohyehia/aws-3-tier-architecture.git
 cd aws-3-tier-architecture/frontend ||return
 
 mv index.html /var/www/html
+mv post.html /var/www/html
 
 # Restart Apache to apply changes
 systemctl restart httpd
