@@ -23,4 +23,9 @@ public class PostController {
     public Post findById(@PathVariable int postId) {
         return postRepository.findById(postId).orElse(new Post(0, 0, "Not Found Post Title", "Not Found Post Body"));
     }
+
+    @PostMapping
+    public Post createPost(@RequestBody Post post) {
+        return postRepository.save(post);
+    }
 }
