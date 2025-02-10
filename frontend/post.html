@@ -57,7 +57,7 @@
     const postId = urlParams.get('id');
 
     if (postId) {
-        const apiUrl = `http://3.249.182.19/api/v1/posts/${postId}`;
+        const apiUrl = `http://internal-demo-be-lb-543916729.eu-west-1.elb.amazonaws.com/api/v1/posts/${postId}`;
 
         document.getElementById('post').style.display = 'block';
         document.getElementById('post').innerHTML = `
