@@ -10,15 +10,13 @@ iptables -t nat -I PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8085
 
 git clone https://github.com/mohyehia/aws-3-tier-architecture.git
 
-export spring_profiles_active=dev
-export DB_URL=jdbc:postgresql://{rds_endpoint}:5432/postgres
-export DB_USERNAME={rds_username}
-export DB_PASSWORD={rds_password}
-
 cd aws-3-tier-architecture/backend/spring-boot-api ||return
-
 mvn clean package
 
-cd target ||return
+export spring_profiles_active=dev
+export DB_URL=jdbc:postgresql://{database_endpoint}:5432/social_db
+export DB_USERNAME={username}
+export DB_PASSWORD={password}
 
+cd target ||return
 java -jar spring-boot-api-0.0.1-SNAPSHOT.jar &
