@@ -31,3 +31,7 @@
   - Attach the application load balancer to the auto-scaling group
   - Create a target group and attach it to the application load balancer
   - For the security group make sure that the load balancer is using the correct one, not the default
+
+### References
+- [AWS 3 Tier Architecture](https://towardsaws.com/aws-3-tier-architecture-63997b69ebc0)
+- [Building a 3-tier web application architecture with AWS](https://medium.com/@aaloktrivedi/building-a-3-tier-web-application-architecture-with-aws-eb5981613e30)
